@@ -159,6 +159,24 @@ h3 {
     margin-right: 10px
 }
 
+.arrow-icon {
+    display: inline-flex;
+    width: 1em;
+    height: 1em;
+    margin-left: .15em;
+    vertical-align: -.12em
+}
+
+.arrow-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round
+}
+
 .btn.o {
     background: none;
     color: var(--ink);

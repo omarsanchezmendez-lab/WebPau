@@ -5,6 +5,7 @@
         form.addEventListener('submit', async event => {
             event.preventDefault();
             const button = form.querySelector('button[type="submit"]');
+            const buttonContent = button.innerHTML;
             const status = document.createElement('p');
             status.className = 'form-status';
             status.setAttribute('role', 'status');
@@ -27,7 +28,7 @@
                 status.dataset.state = 'error';
             } finally {
                 button.disabled = false;
-                button.innerHTML = 'Enviar mensaje &nearr;';
+                button.innerHTML = buttonContent;
             }
         });
     });
