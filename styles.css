@@ -674,15 +674,12 @@ em {
     align-items: center
 }
 
-.meta svg {
+.meta-icon {
     width: .95em;
     height: .95em;
     flex: 0 0 auto;
     margin-right: 9px;
-    fill: none;
-    stroke: var(--amber);
-    stroke-width: 2.8;
-    stroke-linecap: round
+    display: block
 }
 
 .strip {
@@ -1056,7 +1053,7 @@ footer .wrap {
     animation: drift 70s linear infinite
 }
 
-.meta svg {
+.meta-icon {
     display: block;
     animation: spin 6s linear infinite
 }
