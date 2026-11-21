@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Men&uacute; &middot; N0CTRA</title>
+
+  <link href="favicon.ico" rel="icon" sizes="48x48">
+  <link href="assets/favicon.svg" rel="icon" type="image/svg+xml">
+  <link href="assets/apple-touch-icon.png" rel="apple-touch-icon">
+  <meta name="theme-color" content="#171615">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+
+  <script>
+    document.documentElement.classList.add('js');
+  </script>
+  <script defer src="site.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <!-- Isotipo conceptual del brand book (cap. 17, versión sobre fondo oscuro). Reemplazar por el logotipo oficial cuando esté listo. -->
+      <a aria-label="N0CTRA, inicio" class="logo" href="index.html">
+        <img alt="" class="mark" height="40" src="assets/isotipo-crema.svg" width="35">
+        N<span>0</span>CTRA
+      </a>
+
+      <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="primary-nav">
+        <a href="index.html">Experiencias</a>
+        <a class="on" href="menu.html">Men&uacute;</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="brandbook.html">Brand book</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero photo sm" style="--hp:url(https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&amp;fit=crop&amp;w=1800&amp;q=80)">
+      <div class="wrap">
+        <p class="eb">Carta N0CTRA</p>
+        <h1>Nuestro <em>men&uacute;.</em></h1>
+        <p class="lead">Productos y precios unitarios.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="sh">
+          <div>
+            <p class="eb">Hecho para disfrutar</p>
+            <h2>Una carta, muchos momentos.</h2>
+          </div>
+          <p>Una selecci&oacute;n de productos para presentar la experiencia N0CTRA.</p>
+        </div>
+
+        <div class="filters" id="filters">
+          <button aria-pressed="true" class="filter active" data-filter="todos">Todo</button>
+          <button aria-pressed="false" class="filter" data-filter="bebidas">Bebidas</button>
+          <button aria-pressed="false" class="filter" data-filter="paquetes">Paquetes</button>
+          <button aria-pressed="false" class="filter" data-filter="eventos">Eventos</button>
+          <button aria-pressed="false" class="filter" data-filter="complementos">Complementos</button>
+        </div>
+
+        <div class="grid">
+          <!-- Fotografías de ejemplo: reemplazar por fotos propias de cada producto. -->
+          <article class="dish" data-cat="bebidas">
+            <img alt="Imagen de ejemplo: Bebida bot&aacute;nica" loading="lazy" onerror="this.onerror=null;this.src='assets/placeholder.svg'" src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?auto=format&amp;fit=crop&amp;w=700&amp;q=80">
+            <span class="tag">Bebidas</span>
+            <div class="inf"><h3>Bebida bot&aacute;nica</h3><span class="p">$85.00</span></div>
+          </article>
+
+          <article class="dish" data-cat="bebidas">
+            <img alt="Imagen de ejemplo: Limonada premium" loading="lazy" onerror="this.onerror=null;this.src='assets/placeholder.svg'" src="https://images.unsplash.com/photo-1592685864704-91b3d2b8c24a?auto=format&amp;fit=crop&amp;w=700&amp;q=80">
+            <span class="tag">Bebidas</span>
+            <div class="inf"><h3>Limonada premium</h3><span class="p">$65.00</span></div>
+          </article>
+
+          <article class="dish" data-cat="bebidas">
+            <img alt="Imagen de ejemplo: Mocktail c&iacute;trico" loading="lazy" onerror="this.onerror=null;this.src='assets/placeholder.svg'" src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&amp;fit=crop&amp;w=700&amp;q=80">
+            <span class="tag">Bebidas</span>
+            <div class="inf"><h3>Mocktail c&iacute;trico</h3><span class="p">$95.00</span></div>
+          </article>
+
+          <article class="dish" data-cat="bebidas">
+            <img alt="Imagen de ejemplo: Bebida de frutos rojos" loading="lazy" onerror="this.onerror=null;this.src='assets/placeholder.svg'" src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&amp;fit=crop&amp;w=700&amp;q=80">
+            <span class="tag">Bebidas</span>
+            <div class="inf"><h3>Bebida de frutos rojos</h3><span class="p">$90.00</span></div>
+          </article>
+
+          <article class="dish" data-cat="bebidas">
+            <img alt="Imagen de ejemplo: T&eacute; fr&iacute;o artesanal" loading="lazy" onerror="this.onerror=null;this.src='assets/placeholder.svg'" src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&amp;fit=crop&amp;w=700&amp;q=80">
+            <span class="tag">Bebidas</span>
+            <div class="inf"><h3>T&eacute; fr&iacute;o artesanal</h3><span class="p">$70.00</span></div>
+          </article>
+
+          <article class="dish" data-cat="bebidas">
+            <img alt="Imagen de ejemplo: Agua infusionada" loading="lazy" onerror="this.onerror=null;this.src='assets/placeholder.svg'" src="https://images.unsplash.com/photo-1584434990309-08ab4084538c?auto=format&amp;fit=crop&amp;w=700&amp;q=80">
+            <span class="tag">Bebidas</span>
+            <div class="inf"><h3>Agua infusionada</h3><span class="p">$55.00</span></div>
+          </article>
+
+          <article class="dish" data-cat="paquetes">
+            <img alt="Imagen de ejemplo: Kit de bebidas para evento" loading="lazy" onerror="this.onerror=null;this.src='assets/placeholder.svg'" src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&amp;fit=crop&amp;w=700&amp;q=80">
+            <span class="tag">Paquetes</span>
+            <div class="inf"><h3>Kit de bebidas para evento</h3><span class="p">$680.00</span></div>
+          </article>
+
+          <article class="dish" data-cat="eventos">
+            <img alt="Imagen de ejemplo: Barra de bebidas sin alcohol" loading="lazy" onerror="this.onerror=null;this.src='assets/placeholder.svg'" src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&amp;fit=crop&amp;w=700&amp;q=80">
+            <span class="tag">Eventos</span>
+            <div class="inf"><h3>Barra de bebidas sin alcohol</h3><span class="p">$1,850.00</span></div>
+          </article>
+
+          <article class="dish" data-cat="paquetes">
+            <img alt="Imagen de ejemplo: Paquete empresarial" loading="lazy" onerror="this.onerror=null;this.src='assets/placeholder.svg'" src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&amp;fit=crop&amp;w=700&amp;q=80">
+            <span class="tag">Paquetes</span>
+            <div class="inf"><h3>Paquete empresarial</h3><span class="p">$1,250.00</span></div>
+          </article>
+
+          <article class="dish" data-cat="complementos">
+            <img alt="Imagen de ejemplo: Vaso personalizado" loading="lazy" onerror="this.onerror=null;this.src='assets/placeholder.svg'" src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&amp;fit=crop&amp;w=700&amp;q=80">
+            <span class="tag">Complementos</span>
+            <div class="inf"><h3>Vaso personalizado</h3><span class="p">$45.00</span></div>
+          </article>
+
+          <article class="dish" data-cat="complementos">
+            <img alt="Imagen de ejemplo: Jarabe artesanal" loading="lazy" onerror="this.onerror=null;this.src='assets/placeholder.svg'" src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&amp;fit=crop&amp;w=700&amp;q=80">
+            <span class="tag">Complementos</span>
+            <div class="inf"><h3>Jarabe artesanal</h3><span class="p">$110.00</span></div>
+          </article>
+
+          <article class="dish" data-cat="complementos">
+            <img alt="Imagen de ejemplo: Concentrado natural" loading="lazy" onerror="this.onerror=null;this.src='assets/placeholder.svg'" src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?auto=format&amp;fit=crop&amp;w=700&amp;q=80">
+            <span class="tag">Complementos</span>
+            <div class="inf"><h3>Concentrado natural</h3><span class="p">$135.00</span></div>
+          </article>
+
+          <article class="dish" data-cat="paquetes">
+            <img alt="Imagen de ejemplo: Paquete degustaci&oacute;n" loading="lazy" onerror="this.onerror=null;this.src='assets/placeholder.svg'" src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&amp;fit=crop&amp;w=700&amp;q=80">
+            <span class="tag">Paquetes</span>
+            <div class="inf"><h3>Paquete degustaci&oacute;n</h3><span class="p">$320.00</span></div>
+          </article>
+
+          <article class="dish" data-cat="eventos">
+            <img alt="Imagen de ejemplo: Servicio para evento" loading="lazy" onerror="this.onerror=null;this.src='assets/placeholder.svg'" src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&amp;fit=crop&amp;w=700&amp;q=80">
+            <span class="tag">Eventos</span>
+            <div class="inf"><h3>Servicio para evento</h3><span class="p">$2,200.00</span></div>
+          </article>
+
+          <article class="dish" data-cat="paquetes">
+            <img alt="Imagen de ejemplo: Caja de bebidas premium" loading="lazy" onerror="this.onerror=null;this.src='assets/placeholder.svg'" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&amp;fit=crop&amp;w=700&amp;q=80">
+            <span class="tag">Paquetes</span>
+            <div class="inf"><h3>Caja de bebidas premium</h3><span class="p">$540.00</span></div>
+          </article>
+        </div>
+
+        <p class="note">Las im&aacute;genes mostradas son ilustrativas.</p>
+      </div>
+    </section>
+
+    <section class="band">
+      <div class="wrap">
+        <h2>Cada detalle cuenta.</h2>
+        <p class="lead">&iquest;Dudas o pedidos para evento? Escr&iacute;benos.</p>
+        <a class="btn" href="#contacto">Contacto</a>
+      </div>
+    </section>
+
+    <section class="blue" id="contacto">
+      <div class="wrap cgrid">
+        <div>
+          <p class="eb">Nos encantar&aacute; leerte</p>
+          <h2>La conversaci&oacute;n sigue aqu&iacute;.</h2>
+          <p>Para colaboraciones, eventos, dudas o simplemente para saludar, este espacio est&aacute; abierto. Los datos reales de contacto y redes quedan pendientes de confirmar.</p>
+
+          <div class="cd">
+            <div><b>Ubicaci&oacute;n</b><br>Le&oacute;n, Guanajuato</div>
+            <div><b>Horario</b><br>Caf&eacute;: 8:00 &ndash; 20:00<br>Bar: 20:00 &ndash; 3:00</div>
+            <div><b>Correo</b><br><a href="mailto:noctracafe@gmail.com">noctracafe@gmail.com</a></div>
+            <div><b>Instagram</b><br><a href="https://www.instagram.com/pau.eliosty/" target="_blank" rel="noopener noreferrer">@pau.eliosty</a></div>
+          </div>
+        </div>
+
+        <form class="cf" action="https://formspree.io/f/moedndqz" method="POST">
+          <input aria-label="Tu nombre" name="name" placeholder="Tu nombre" required>
+          <input aria-label="Correo electr&oacute;nico" name="_replyto" placeholder="Correo electr&oacute;nico" required type="email">
+          <input name="_subject" type="hidden" value="Mensaje desde el sitio de N0CTRA">
+          <textarea aria-label="Mensaje" name="message" placeholder="Cu&eacute;ntanos qu&eacute; tienes en mente" required></textarea>
+          <button class="btn" type="submit">Enviar mensaje &nearrow;</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="fg">
+        <div>
+          <a class="logo" href="index.html" style="text-decoration:none">N<span>0</span>CTRA</a>
+          <p>Caf&eacute; de d&iacute;a. Jazz de noche. Una misma esencia que cambia con la luz y permanece en los detalles.</p>
+        </div>
+
+        <div>
+          <h4>Explora</h4>
+          <a href="index.html">Experiencias</a>
+          <a href="menu.html">Men&uacute;</a>
+          <a href="nosotros.html">Nosotros</a>
+          <a href="brandbook.html">Brand book</a>
+        </div>
+
+        <div>
+          <h4>Encu&eacute;ntranos</h4>
+          <a href="#contacto">Contacto</a>
+          <a href="mailto:noctracafe@gmail.com">noctracafe@gmail.com</a>
+          <a href="https://www.instagram.com/pau.eliosty/" target="_blank" rel="noopener noreferrer">@pau.eliosty</a>
+        </div>
+      </div>
+
+      <div class="copy">
+        <span>&copy; 2026 N0CTRA &middot; Propuesta de identidad</span>
+        <span>Dise&ntilde;ado para vivir cada momento.</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
