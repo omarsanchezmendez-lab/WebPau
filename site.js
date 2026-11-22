@@ -77,7 +77,87 @@
         passive: true
     });
     const f = d.getElementById('filters');
-    if (f) {
+    const menuSection = d.querySelector('.menu-section');
+    if (f && menuSection) {
+        const cards = [...menuSection.querySelectorAll('.menu-dish')];
+        const moments = d.getElementById('menu-moments');
+        const categories = {
+            dia: [
+                ['todos', 'Todo'],
+                ['bebidas', 'Bebidas'],
+                ['paquetes', 'Paquetes'],
+                ['eventos', 'Eventos'],
+                ['complementos', 'Complementos']
+            ],
+            noche: [
+                ['todos', 'Todo'],
+                ['bebidas', 'Bebidas'],
+                ['paquetes', 'Paquetes'],
+                ['eventos', 'Eventos'],
+                ['complementos', 'Complementos']
+            ]
+        };
+        let currentMoment = 'dia';
+        let currentCategory = 'todos';
+        const renderCategories = () => {
+            f.replaceChildren();
+            categories[currentMoment].forEach(([value, label], index) => {
+                const button = d.createElement('button');
+                button.type = 'button';
+                button.className = `filter${index === 0 ? ' active' : ''}`;
+                button.dataset.filter = value;
+                button.setAttribute('aria-pressed', String(index === 0));
+                button.textContent = label;
+                f.append(button);
+            });
+        };
+        const renderCards = () => {
+            cards.forEach(card => {
+                const visible = card.dataset.moment.split(' ').includes(currentMoment) &&
+                    (currentCategory === 'todos' || card.dataset.cat.split(' ').includes(currentCategory));
+                card.hidden = !visible;
+                if (visible) {
+                    card.classList.remove('pop');
+                    void card.offsetWidth;
+                    card.classList.add('pop');
+                }
+            });
+        };
+        const renderMoment = () => {
+            const night = currentMoment === 'noche';
+            menuSection.dataset.moment = currentMoment;
+            d.getElementById('menu-kicker').textContent = `Menú de ${night ? 'noche' : 'día'}`;
+            d.getElementById('menu-description').textContent = night
+                ? 'Bebidas, paquetes, eventos y complementos para disfrutar cuando baja la luz.'
+                : 'Bebidas, paquetes, eventos y complementos de la carta N0CTRA.';
+            moments.querySelectorAll('[data-moment]').forEach(button => {
+                const active = button.dataset.moment === currentMoment;
+                button.classList.toggle('active', active);
+                button.setAttribute('aria-pressed', String(active));
+            });
+            currentCategory = 'todos';
+            renderCategories();
+            renderCards();
+        };
+        moments.addEventListener('click', event => {
+            const button = event.target.closest('[data-moment]');
+            if (!button || button.dataset.moment === currentMoment) return;
+            currentMoment = button.dataset.moment;
+            renderMoment();
+        });
+        f.addEventListener('click', event => {
+            const button = event.target.closest('[data-filter]');
+            if (!button) return;
+            currentCategory = button.dataset.filter;
+            f.querySelectorAll('.filter').forEach(filter => {
+                const active = filter === button;
+                filter.classList.toggle('active', active);
+                filter.setAttribute('aria-pressed', String(active));
+            });
+            renderCards();
+        });
+        renderMoment();
+    } else if (f) {
         const ds = [...d.querySelectorAll('.dish')];
         f.onclick = e => {
             const b = e.target.closest('[data-filter]');

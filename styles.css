@@ -2039,3 +2039,20 @@ canvas {
         grid-template-columns: 1fr
     }
 }
+
+.moment-switch {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px
+}
+
+.moment-button {
+    display: grid;
+    justify-items: start;
+    gap: 2px
+}
+
+.moment-button small {
+    font-size: .7rem;
+    opacity: .8
+}
