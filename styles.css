@@ -2099,7 +2099,7 @@ canvas {
 }
 
 .menu-section[data-moment="noche"] .dish:nth-child(even) {
-    background: var(--blue)
+    background: #252321
 }
 
 .menu-section[data-moment="noche"] .dish img {
