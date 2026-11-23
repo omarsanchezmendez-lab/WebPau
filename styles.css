@@ -1973,7 +1973,7 @@ canvas {
     }
 
     .hero .wrap {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
         gap: 24px
     }
 
@@ -2046,7 +2046,7 @@ canvas {
     }
 
     .fg {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
         gap: 24px
     }
 
