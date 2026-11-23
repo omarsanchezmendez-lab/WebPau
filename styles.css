@@ -2056,3 +2056,66 @@ canvas {
     font-size: .7rem;
     opacity: .8
 }
+
+/* Inversión cromática del menú nocturno */
+.menu-section[data-moment="noche"] {
+    background: var(--ink);
+    color: var(--cream)
+}
+
+.menu-section[data-moment="noche"] .sh,
+.menu-section[data-moment="noche"] .sh h2,
+.menu-section[data-moment="noche"] .eb {
+    color: var(--cream)
+}
+
+.menu-section[data-moment="noche"] .sh p:not(.eb) {
+    color: var(--taupe)
+}
+
+.menu-section[data-moment="noche"] .filter {
+    border-color: var(--cream);
+    background: transparent;
+    color: var(--cream)
+}
+
+.menu-section[data-moment="noche"] .filter:hover {
+    background: var(--amber);
+    border-color: var(--amber);
+    color: var(--ink)
+}
+
+.menu-section[data-moment="noche"] .filter.active {
+    background: var(--cream);
+    border-color: var(--cream);
+    color: var(--ink)
+}
+
+.menu-section[data-moment="noche"] .dish {
+    border-color: var(--cream);
+    background: #252321;
+    color: var(--cream);
+    box-shadow: 6px 6px 0 var(--amber)
+}
+
+.menu-section[data-moment="noche"] .dish:nth-child(even) {
+    background: var(--blue)
+}
+
+.menu-section[data-moment="noche"] .dish img {
+    border-bottom-color: var(--cream)
+}
+
+.menu-section[data-moment="noche"] .tag {
+    border-color: var(--cream);
+    background: var(--amber);
+    color: var(--ink)
+}
+
+.menu-section[data-moment="noche"] .inf .p {
+    color: var(--amber)
+}
+
+.menu-section[data-moment="noche"] .note {
+    color: var(--taupe)
+}
