@@ -1569,16 +1569,19 @@ header .logo:hover .mark {
     }
 }
 
-.methods>div {
+.methods>div,
+.methods .method-card {
     transition: transform .25s, box-shadow .25s
 }
 
-.methods>div:hover {
+.methods>div:hover,
+.methods .method-card:hover {
     transform: rotate(0) translateY(-6px);
     box-shadow: 8px 11px 0 var(--ink)
 }
 
-.methods>div:hover .lbl {
+.methods>div:hover .lbl,
+.methods .method-card:hover .lbl {
     color: var(--blue)
 }
 
@@ -1587,7 +1590,8 @@ header .logo:hover .mark {
     transition: scale .3s
 }
 
-.methods>div:hover .d {
+.methods>div:hover .d,
+.methods .method-card:hover .d {
     scale: 1.1
 }
 
@@ -1607,75 +1611,90 @@ header .logo:hover .mark {
     stroke: none
 }
 
-.methods>div:nth-child(3n+2) {
+.methods>div:nth-child(3n+2),
+.methods .method-card:nth-child(3n+2) {
     --dl: .15s
 }
 
-.methods>div:nth-child(3n) {
+.methods>div:nth-child(3n),
+.methods .method-card:nth-child(3n) {
     --dl: .3s
 }
 
-.js .methods>div.rv:not(.in) .d :is(path, ellipse, circle):not(.x) {
+.js .methods>div.rv:not(.in) .d :is(path, ellipse, circle):not(.x),
+.js .methods .method-card.rv:not(.in) .d :is(path, ellipse, circle):not(.x) {
     stroke-dasharray: 1;
     stroke-dashoffset: 1;
     opacity: 0
 }
 
-.js .methods>div.rv.in .d :is(path, ellipse, circle):not(.x) {
+.js .methods>div.rv.in .d :is(path, ellipse, circle):not(.x),
+.js .methods .method-card.rv.in .d :is(path, ellipse, circle):not(.x) {
     stroke-dasharray: 1;
     stroke-dashoffset: 1;
     opacity: 0;
     animation: draw 1.2s calc(.3s + var(--dl, 0s)) ease-out forwards
 }
 
-.methods>div.in .x {
+.methods>div.in .x,
+.methods .method-card.in .x {
     animation-duration: 2.6s;
     animation-iteration-count: infinite;
     animation-delay: calc(1.8s + var(--dl, 0s))
 }
 
-.methods>div.in .drop {
+.methods>div.in .drop,
+.methods .method-card.in .drop {
     animation-name: drip;
     animation-timing-function: ease-in
 }
 
-.methods>div.in .drop.d2 {
+.methods>div.in .drop.d2,
+.methods .method-card.in .drop.d2 {
     animation-delay: calc(3.1s + var(--dl, 0s))
 }
 
-.methods>div.in .st {
+.methods>div.in .st,
+.methods .method-card.in .st {
     animation-name: steam;
     animation-timing-function: ease-in-out
 }
 
-.methods>div.in .st.d2 {
+.methods>div.in .st.d2,
+.methods .method-card.in .st.d2 {
     animation-delay: calc(2.7s + var(--dl, 0s))
 }
 
-.methods>div.in .bub {
+.methods>div.in .bub,
+.methods .method-card.in .bub {
     animation-name: bubble;
     animation-timing-function: ease-out
 }
 
-.methods>div.in .bub.d2 {
+.methods>div.in .bub.d2,
+.methods .method-card.in .bub.d2 {
     animation-delay: calc(3s + var(--dl, 0s))
 }
 
-.methods>div.in .flow {
+.methods>div.in .flow,
+.methods .method-card.in .flow {
     opacity: .95;
     stroke-dasharray: 3 5;
     animation: flow .8s linear infinite
 }
 
-.methods>div.in .lid {
+.methods>div.in .lid,
+.methods .method-card.in .lid {
     animation: lid 2s calc(1.8s + var(--dl, 0s)) ease-in-out infinite
 }
 
-.methods>div.in .press {
+.methods>div.in .press,
+.methods .method-card.in .press {
     animation: press 3s calc(1.8s + var(--dl, 0s)) ease-in-out infinite
 }
 
-.methods>div.in .plunge {
+.methods>div.in .plunge,
+.methods .method-card.in .plunge {
     animation: plunge 3.2s calc(1.8s + var(--dl, 0s)) ease-in-out infinite
 }
 

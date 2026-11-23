@@ -56,7 +56,7 @@
             if (e.key === 'Escape') closeNav();
         });
     }
-    const els = [...d.querySelectorAll('.card,.dish,.methods>div,main h2,.duality article,.story>*,.ngrid>*,.cgrid>*,.bc,.sh,.strip,.quote blockquote,.ls,.ap,.swatch')];
+    const els = [...d.querySelectorAll('.card,.dish,.methods>div,.methods .method-card,main h2,.duality article,.story>*,.ngrid>*,.cgrid>*,.bc,.sh,.strip,.quote blockquote,.ls,.ap,.swatch')];
     if (!rm && 'IntersectionObserver' in window) {
         els.forEach(e => e.classList.add('rv'));
         const io = new IntersectionObserver(es => es.forEach(x => {
