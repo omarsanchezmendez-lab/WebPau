@@ -12,10 +12,10 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;family=Inter:wght@400;500;600&amp;display=swap" />
-	<link rel="stylesheet" href="styles.css?v=4" />
+	<link rel="stylesheet" href="styles.css?v=10" />
 
 	<script>document.documentElement.classList.add("js")</script>
-	<script defer src="site.js?v=4"></script>
+	<script defer src="site.js?v=10"></script>
 </head>
 <body>
 	<header>
@@ -151,7 +151,25 @@
 	</div>
 </section>
 <section><div class="wrap"><h2>M&eacute;todos de caf&eacute;</h2><p>Las formas de preparar caf&eacute;.</p>
-<div class="methods"><div><svg aria-hidden="true" class="d v60" viewbox="0 0 64 64"><path d="M12 8h40L38 28H26z"></path><path d="M26 32h12M16 36h32l4 22H12z"></path><path d="M50 42q8 0 8 8t-8 6"></path><circle class="x drop" cx="32" cy="34" r="1.8"></circle><circle class="x drop d2" cx="32" cy="34" r="1.8"></circle></svg><span class="lbl">V60</span></div><div><svg aria-hidden="true" class="d esp" viewbox="0 0 64 64"><path d="M8 16h28v10H8z"></path><path d="M36 20h22"></path><path class="x flow" d="M22 29v26"></path></svg><span class="lbl">Espresso</span></div><div><svg aria-hidden="true" class="d pod" viewbox="0 0 64 64"><path d="M12 22h24l-3 22H15z"></path><ellipse cx="24" cy="22" rx="12" ry="4"></ellipse><path d="M42 40h12l-2 14H44z"></path><path class="x st" d="M46 36q-3-4 0-8"></path><path class="x st d2" d="M51 36q3-4 0-8"></path></svg><span class="lbl">Coffee pod</span></div><div><svg aria-hidden="true" class="d chx" viewbox="0 0 64 64"><path d="M14 8h36L38 30v4l12 22H14l12-22v-4z"></path><path d="M24 46h16"></path><circle class="x drop" cx="32" cy="33" r="1.8"></circle><circle class="x drop d2" cx="32" cy="33" r="1.8"></circle></svg><span class="lbl">Chemex</span></div><div><svg aria-hidden="true" class="d moka" viewbox="0 0 64 64"><g class="lid"><path d="M20 8h24l-3 14H23z"></path></g><path d="M18 26h28l-4 32H22z"></path><path d="M44 12q10 0 8 12"></path></svg><span class="lbl">Moka pot</span></div><div><svg aria-hidden="true" class="d cez" viewbox="0 0 64 64"><path d="M8 32h24l4 22H4z"></path><path d="M34 34l24-12"></path><path class="x st" d="M15 28q-3-4 0-8"></path><path class="x st d2" d="M25 28q3-4 0-8"></path></svg><span class="lbl">Turkish cezve</span></div><div><svg aria-hidden="true" class="d sif" viewbox="0 0 64 64"><path d="M20 6h16v24H20z"></path><circle cx="28" cy="44" r="11"></circle><path d="M44 12v36M40 56h12"></path><circle class="x bub" cx="25" cy="48" r="1.7"></circle><circle class="x bub d2" cx="31" cy="48" r="1.7"></circle></svg><span class="lbl">Siphon</span></div><div><svg aria-hidden="true" class="d aer" viewbox="0 0 64 64"><g class="press"><path d="M24 6h16v34H24z"></path></g><path d="M16 40h32M20 40v16h24V40"></path><path d="M44 44q8 0 8 6t-8 6"></path></svg><span class="lbl">Aeropress</span></div><div><svg aria-hidden="true" class="d fre" viewbox="0 0 64 64"><path d="M16 20h28v36H16z"></path><g class="plunge"><path d="M30 6v14M24 6h12"></path></g><path d="M16 28h28"></path><path d="M44 30q10 0 10 10t-10 10"></path></svg><span class="lbl">French press</span></div></div></div></section>
+<div class="methods">
+<button class="method-card" type="button" data-method="v60" aria-haspopup="dialog"><svg aria-hidden="true" class="d v60" viewbox="0 0 64 64"><path d="M12 8h40L38 28H26z"></path><path d="M26 32h12M16 36h32l4 22H12z"></path><path d="M50 42q8 0 8 8t-8 6"></path><circle class="x drop" cx="32" cy="34" r="1.8"></circle><circle class="x drop d2" cx="32" cy="34" r="1.8"></circle></svg><span class="lbl">V60</span></button>
+<button class="method-card" type="button" data-method="espresso" aria-haspopup="dialog"><svg aria-hidden="true" class="d esp" viewbox="0 0 64 64"><path d="M8 16h28v10H8z"></path><path d="M36 20h22"></path><path class="x flow" d="M22 29v26"></path></svg><span class="lbl">Espresso</span></button>
+<button class="method-card" type="button" data-method="pod" aria-haspopup="dialog"><svg aria-hidden="true" class="d pod" viewbox="0 0 64 64"><path d="M12 22h24l-3 22H15z"></path><ellipse cx="24" cy="22" rx="12" ry="4"></ellipse><path d="M42 40h12l-2 14H44z"></path><path class="x st" d="M46 36q-3-4 0-8"></path><path class="x st d2" d="M51 36q3-4 0-8"></path></svg><span class="lbl">Coffee pod</span></button>
+<button class="method-card" type="button" data-method="chemex" aria-haspopup="dialog"><svg aria-hidden="true" class="d chx" viewbox="0 0 64 64"><path d="M14 8h36L38 30v4l12 22H14l12-22v-4z"></path><path d="M24 46h16"></path><circle class="x drop" cx="32" cy="33" r="1.8"></circle><circle class="x drop d2" cx="32" cy="33" r="1.8"></circle></svg><span class="lbl">Chemex</span></button>
+<button class="method-card" type="button" data-method="moka" aria-haspopup="dialog"><svg aria-hidden="true" class="d moka" viewbox="0 0 64 64"><g class="lid"><path d="M20 8h24l-3 14H23z"></path></g><path d="M18 26h28l-4 32H22z"></path><path d="M44 12q10 0 8 12"></path></svg><span class="lbl">Moka pot</span></button>
+<button class="method-card" type="button" data-method="cezve" aria-haspopup="dialog"><svg aria-hidden="true" class="d cez" viewbox="0 0 64 64"><path d="M8 32h24l4 22H4z"></path><path d="M34 34l24-12"></path><path class="x st" d="M15 28q-3-4 0-8"></path><path class="x st d2" d="M25 28q3-4 0-8"></path></svg><span class="lbl">Turkish cezve</span></button>
+<button class="method-card" type="button" data-method="siphon" aria-haspopup="dialog"><svg aria-hidden="true" class="d sif" viewbox="0 0 64 64"><path d="M20 6h16v24H20z"></path><circle cx="28" cy="44" r="11"></circle><path d="M44 12v36M40 56h12"></path><circle class="x bub" cx="25" cy="48" r="1.7"></circle><circle class="x bub d2" cx="31" cy="48" r="1.7"></circle></svg><span class="lbl">Siphon</span></button>
+<button class="method-card" type="button" data-method="aeropress" aria-haspopup="dialog"><svg aria-hidden="true" class="d aer" viewbox="0 0 64 64"><g class="press"><path d="M24 6h16v34H24z"></path></g><path d="M16 40h32M20 40v16h24V40"></path><path d="M44 44q8 0 8 6t-8 6"></path></svg><span class="lbl">Aeropress</span></button>
+<button class="method-card" type="button" data-method="french" aria-haspopup="dialog"><svg aria-hidden="true" class="d fre" viewbox="0 0 64 64"><path d="M16 20h28v36H16z"></path><g class="plunge"><path d="M30 6v14M24 6h12"></path></g><path d="M16 28h28"></path><path d="M44 30q10 0 10 10t-10 10"></path></svg><span class="lbl">French press</span></button>
+</div>
+<dialog class="method-dialog" id="method-dialog" aria-labelledby="method-title">
+  <button class="method-close" type="button" aria-label="Cerrar">&times;</button>
+  <p class="eb">M&eacute;todo de preparaci&oacute;n</p>
+  <h2 id="method-title"></h2>
+  <p id="method-description"></p>
+  <div class="method-facts" id="method-facts"></div>
+</dialog>
+</div></section>
 <section class="band quote">
 	<div class="wrap">
 		<p class="eb">Manifiesto N0CTRA</p>

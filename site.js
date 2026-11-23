@@ -76,6 +76,47 @@
     addEventListener('scroll', () => h.classList.toggle('sc', scrollY > 10), {
         passive: true
     });
+    const methodDialog = d.getElementById('method-dialog');
+    if (methodDialog) {
+        const methodData = {
+            v60: ['V60', 'Preparación manual por filtrado que deja pasar el café de forma uniforme y controlada. Destaca notas claras y una textura limpia.', ['Filtrado', '1 a 4 minutos', 'Sabor limpio']],
+            espresso: ['Espresso', 'Extracción concentrada a alta presión. Produce una bebida corta con cuerpo intenso y una crema característica.', ['Presión', '25 a 30 segundos', 'Concentrado']],
+            pod: ['Coffee pod', 'Sistema práctico y consistente que usa cápsulas selladas para preparar una taza rápida con poca variación.', ['Cápsula', '30 a 60 segundos', 'Práctico']],
+            chemex: ['Chemex', 'Filtrado de vertido con un diseño elegante y filtros gruesos que producen una taza muy limpia y aromática.', ['Vertido', '3 a 5 minutos', 'Aromático']],
+            moka: ['Moka pot', 'Se prepara en estufa: el agua pasa a presión por el café molido y produce una infusión intensa y concentrada.', ['Estufa', '4 a 6 minutos', 'Intenso']],
+            cezve: ['Turkish cezve', 'Café finamente molido cocido lentamente en una pequeña olla. Se sirve con sus posos y conserva mucho cuerpo.', ['Estufa', '3 a 5 minutos', 'Espeso']],
+            siphon: ['Siphon', 'Método visual que combina vacío y presión. Elimina muchas impurezas y ofrece una taza aromática con gran claridad.', ['Vacío', '4 a 6 minutos', 'Visual']],
+            aeropress: ['Aeropress', 'Inmersión breve seguida de presión manual. Permite ajustar fuerza y extracción para obtener una taza versátil.', ['Inmersión', '1 a 3 minutos', 'Versátil']],
+            french: ['French press', 'El café permanece en contacto directo con el agua antes de filtrarlo con émbolo. Da cuerpo completo y aceites naturales.', ['Inmersión', '4 minutos', 'Cuerpo completo']]
+        };
+        const title = d.getElementById('method-title');
+        const description = d.getElementById('method-description');
+        const facts = d.getElementById('method-facts');
+        d.querySelectorAll('[data-method]').forEach(card => {
+            card.addEventListener('click', () => {
+                const [methodTitle, methodDescription, methodFacts] = methodData[card.dataset.method];
+                title.textContent = methodTitle;
+                description.textContent = methodDescription;
+                facts.replaceChildren();
+                methodFacts.forEach((fact, index) => {
+                    const item = d.createElement('span');
+                    const labels = ['Tipo', 'Tiempo', 'Perfil'];
+                    const label = d.createElement('strong');
+                    label.textContent = labels[index];
+                    item.append(label, fact);
+                    facts.append(item);
+                });
+                methodDialog.showModal();
+            });
+        });
+        d.querySelector('.method-close').addEventListener('click', () => methodDialog.close());
+        methodDialog.addEventListener('click', event => {
+            if (event.target === methodDialog) methodDialog.close();
+        });
+        addEventListener('keydown', event => {
+            if (event.key === 'Escape' && methodDialog.open) methodDialog.close();
+        });
+    }
     const f = d.getElementById('filters');
     const menuSection = d.querySelector('.menu-section');
     if (f && menuSection) {
