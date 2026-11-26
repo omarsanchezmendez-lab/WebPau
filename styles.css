@@ -2257,3 +2257,100 @@ canvas {
 .menu-section[data-moment="noche"] .note {
     color: var(--taupe)
 }
+
+@keyframes hero-drift {
+    to {
+        background-position: 53% 47%
+    }
+}
+
+@keyframes blob-float {
+    0%,
+    100% {
+        transform: translateY(0) rotate(-1deg)
+    }
+
+    50% {
+        transform: translateY(-9px) rotate(1deg)
+    }
+}
+
+.hero.photo {
+    animation: hero-drift 32s ease-in-out infinite alternate
+}
+
+.blob {
+    animation: blob-float 7s ease-in-out infinite
+}
+
+.js .rv {
+    scale: .97;
+    transition: opacity .8s ease, translate .8s cubic-bezier(.2, .7, .2, 1), scale .8s cubic-bezier(.2, .7, .2, 1), transform .35s ease
+}
+
+.js .rv.in {
+    scale: 1
+}
+
+.nav a {
+    transition: color .25s ease, border-color .25s ease, transform .25s ease
+}
+
+.card,
+.dish,
+.metodo,
+.bc,
+.color i,
+.valor,
+.filter,
+.moment-button {
+    transition: transform .35s cubic-bezier(.2, .7, .2, 1), box-shadow .35s ease
+}
+
+@media(hover:hover) {
+    .nav a:hover {
+        transform: translateY(-2px)
+    }
+
+    .card:hover,
+    .dish:hover {
+        transform: translate(-4px, -5px) rotate(-.5deg)
+    }
+
+    .metodo:hover,
+    .bc:hover {
+        transform: translateY(-5px) rotate(-.4deg)
+    }
+
+    .color i:hover {
+        transform: scale(1.06) rotate(4deg)
+    }
+
+    .valor:hover {
+        transform: translateY(-4px) rotate(0) scale(1.04)
+    }
+
+    .filter:hover,
+    .moment-button:hover {
+        transform: translateY(-2px) scale(1.03)
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .hero.photo,
+    .blob {
+        animation: none
+    }
+
+    .card:hover,
+    .dish:hover,
+    .metodo:hover,
+    .bc:hover,
+    .color i:hover,
+    .valor:hover,
+    .filter:hover,
+    .moment-button:hover,
+    .nav a:hover {
+        transform: none
+    }
+}
